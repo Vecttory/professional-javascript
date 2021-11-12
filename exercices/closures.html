@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <a href="./index.html">Go back</a>
+    <p><em>Open the console</em></p>
+
+    <script>
+        
+        // (function (params) {
+        //     let color = 'green';
+        //     function printColor(params) {
+        //         console.log(color);
+        //     }
+    
+        //     printColor();
+        // })();
+
+        // function makeColorPrinter(color) {
+        //     let colorMessage = `The color is ${color}`;
+
+        //     return function() {
+        //         console.log(colorMessage);
+        //     }
+        // }
+
+        // let greenColorPrinter = makeColorPrinter('Green');
+
+        // console.log(greenColorPrinter());
+
+        function makeCounter(n=0) {
+            let counter = n;
+
+            return {
+                increase: function() { counter += 1; },
+                decrease: function() { counter -= 1; },
+                getCount: function() { return counter }
+            }
+        }
+
+        let counter = makeCounter(4);
+
+        counter.increase();
+        counter.increase();
+        counter.increase();
+
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+        counter.decrease();
+
+        console.log(counter.getCount());
+
+    </script>
+</body>
+</html>

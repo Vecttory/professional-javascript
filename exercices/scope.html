@@ -12,6 +12,42 @@
     </header>
     <main>
         <a href="./index.html">Go back</a>
+        <p><em>Open the console</em></p>
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        // Global Scope
+        var message = 'Hello, Platzi!';
+        var $ = function(message) {
+            console.log(`Message: ${message}`);
+        }
+
+        // Function Scope
+        // function printNumbers() {
+        //     for (var i = 0; i < 10; i++) {
+        //         function eventuallyPrintNumber(number) {
+        //             setTimeout(() => {
+        //                 console.log(number);
+        //             }, 100);
+        //         }
+        //         eventuallyPrintNumber(i);
+        //     }
+        // }
+
+        // printNumbers();
+
+        // Block Scope
+        function printNumbers2() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    console.log(i);
+                }, 100);
+            }
+        }
+
+        printNumbers2()
+
+        // Module Scope
+    </script>
 </body>
 </html>
