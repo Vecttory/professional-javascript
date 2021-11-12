@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPlayer.js</title>
+</head>
+<body>
+    <header>
+        <h1>Media Player</h1>
+        <p>An extensible media player.</p>
+    </header>
+    <main>
+        <ol>
+            <li><a href="./exercices/">Go to exercices</a></li>
+        </ol>
+        <video>
+            <source src="./assets/stock-video.mp4"/>
+        </video>
+
+        <button>Play/Pause</button>
+    </main>
+
+    <script>
+        const video = document.querySelector('video');
+        const button = document.querySelector('button');
+
+        function MediaPlayer(config) {
+            this.media = config.el;
+        };
+
+        MediaPlayer.prototype.playOrPause = function() {
+            if (this.media.paused) return this.media.play();
+            this.media.pause();
+        }
+
+        const player = new MediaPlayer({ el: video });
+
+        button.onclick = () => player.playOrPause();
+    </script>
+</body>
+</html>

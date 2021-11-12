@@ -1,0 +1,14 @@
+{
+  "name": "media-player",
+  "version": "1.0.0",
+  "description": "Professional Javascript",
+  "license": "MIT",
+  "author": "José Alberto Ola Ruíz",
+  "keywords": [],
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
