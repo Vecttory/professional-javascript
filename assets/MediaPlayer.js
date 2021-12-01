@@ -10,6 +10,14 @@ MediaPlayer.prototype.togglePlay = function() {
     this.media.pause();
 }
 
+MediaPlayer.prototype.play = function() {
+    this.media.play();
+}
+
+MediaPlayer.prototype.pause = function() {
+    this.media.pause();
+}
+
 MediaPlayer.prototype.mute = function() {
     this.media.muted = true;
 }
@@ -27,6 +35,8 @@ MediaPlayer.prototype._initPlugins = function() {
 
     const player = {
         togglePlay: () => this.togglePlay(),
+        play: () => this.play(),
+        pause: () => this.pause(),
         media: this.media,
         get muted() {
             return this.media.muted;
