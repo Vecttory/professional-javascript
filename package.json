@@ -6,9 +6,13 @@
   "author": "José Alberto Ola Ruíz",
   "keywords": [],
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html exercices/index.html exercices/**/*.html"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.5.2"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
